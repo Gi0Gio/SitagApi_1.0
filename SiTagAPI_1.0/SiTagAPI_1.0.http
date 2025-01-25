@@ -1,0 +1,6 @@
+@SiTagAPI_1._0_HostAddress = http://localhost:5026
+
+GET {{SiTagAPI_1._0_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
