@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\gio\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\gio\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\sitagcontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\sitagcontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\gio\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\gio\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\gio\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\gio\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\sitagcontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\sitagcontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,20 +50,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\appsettings.json",
+              "RelativeDocumentMoniker": "SiTagAPI_1.0\\appsettings.json",
+              "ToolTip": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\appsettings.json",
+              "RelativeToolTip": "SiTagAPI_1.0\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-25T03:37:54.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\Program.cs",
+              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Program.cs",
+              "ToolTip": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\Program.cs",
+              "RelativeToolTip": "SiTagAPI_1.0\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T03:19:09.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "SiTagAPI_1.0\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\Controllers\\AuthController.cs",
               "RelativeToolTip": "SiTagAPI_1.0\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAEYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAIBJwEYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T02:40:03.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Farm.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\Models\\Farm.cs",
               "RelativeDocumentMoniker": "SiTagAPI_1.0\\Models\\Farm.cs",
@@ -68,20 +102,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\DTOs\\UserDto.cs",
               "RelativeDocumentMoniker": "SiTagAPI_1.0\\DTOs\\UserDto.cs",
               "ToolTip": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\DTOs\\UserDto.cs",
               "RelativeToolTip": "SiTagAPI_1.0\\DTOs\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T02:29:49.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\Models\\User.cs",
               "RelativeDocumentMoniker": "SiTagAPI_1.0\\Models\\User.cs",
@@ -94,13 +128,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "SitagContextDB.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\SitagContextDB.cs",
               "RelativeDocumentMoniker": "SiTagAPI_1.0\\SitagContextDB.cs",
               "ToolTip": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\SitagContextDB.cs",
               "RelativeToolTip": "SiTagAPI_1.0\\SitagContextDB.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T02:22:34.79Z",
               "EditorCaption": ""
