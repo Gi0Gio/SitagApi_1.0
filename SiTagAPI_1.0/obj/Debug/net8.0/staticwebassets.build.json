@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "u067ejGN4ftCtRZ31MOA3ocuJu2caUMXJN/memo//lg=",
+  "Hash": "g2/I5tkbXqSquCa3+hBaO5lgOtRf+P+H4B7/09C/rPo=",
   "Source": "SiTagAPI_1.0",
   "BasePath": "_content/SiTagAPI_1.0",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
