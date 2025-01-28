@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\SiTagAPI_1.0.csproj": {}
+    "C:\\Users\\evers\\Source\\Repos\\SitagApi_1.0\\SiTagAPI_1.0\\SiTagAPI_1.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\SiTagAPI_1.0.csproj": {
+    "C:\\Users\\evers\\Source\\Repos\\SitagApi_1.0\\SiTagAPI_1.0\\SiTagAPI_1.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\SiTagAPI_1.0.csproj",
+        "projectUniqueName": "C:\\Users\\evers\\Source\\Repos\\SitagApi_1.0\\SiTagAPI_1.0\\SiTagAPI_1.0.csproj",
         "projectName": "SiTagAPI_1.0",
-        "projectPath": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\SiTagAPI_1.0.csproj",
-        "packagesPath": "C:\\Users\\Gio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gio\\source\\repos\\SiTagAPI_1.0\\SiTagAPI_1.0\\obj\\",
+        "projectPath": "C:\\Users\\evers\\Source\\Repos\\SitagApi_1.0\\SiTagAPI_1.0\\SiTagAPI_1.0.csproj",
+        "packagesPath": "C:\\Users\\evers\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\evers\\Source\\Repos\\SitagApi_1.0\\SiTagAPI_1.0\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\evers\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,13 +43,32 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.Core": {
+              "target": "Package",
+              "version": "[1.44.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.1, )"
             },
@@ -64,9 +82,17 @@
               "target": "Package",
               "version": "[9.0.1, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.3.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             }
           },
           "imports": [
@@ -88,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

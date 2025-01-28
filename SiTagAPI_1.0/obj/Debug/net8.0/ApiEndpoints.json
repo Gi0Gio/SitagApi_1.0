@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "SiTagAPI_1._0.Controllers.AnimalController",
+    "Method": "CreateAnimal",
+    "RelativePath": "api/Animal/addAnimal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createAnimal",
+        "Type": "SiTagAPI_1._0.DTOs.CreateAnimalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SiTagAPI_1._0.Models.animal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SiTagAPI_1._0.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -26,6 +52,159 @@
       {
         "Name": "userDto",
         "Type": "SiTagAPI_1._0.DTOs.RegisterUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.DataController",
+    "Method": "CreateData",
+    "RelativePath": "api/Data/addAnimalInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataDto",
+        "Type": "SiTagAPI_1._0.DTOs.CreateDataDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.DataController",
+    "Method": "GetAnimalRecord",
+    "RelativePath": "api/Data/getAnimalRecord/{animalid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "animalid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.DivisionController",
+    "Method": "CreateDivision",
+    "RelativePath": "api/Division",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDivision",
+        "Type": "SiTagAPI_1._0.DTOs.CreateDivisionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SiTagAPI_1._0.Models.division",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.DivisionController",
+    "Method": "GetDivisionsByFarmId",
+    "RelativePath": "api/Division/getDivisionsByFarmId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "farmId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SiTagAPI_1._0.DTOs.ShowDivisionDto, SiTagAPI_1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.FarmController",
+    "Method": "CreateFarm",
+    "RelativePath": "api/Farm/addFarm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "farmDto",
+        "Type": "SiTagAPI_1._0.DTOs.CreateFarmDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.FarmController",
+    "Method": "GetFarmsByUserId",
+    "RelativePath": "api/Farm/getFarmsByUserId/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.FarmController",
+    "Method": "UpdateFarm",
+    "RelativePath": "api/Farm/updateAnimal",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "farmDto",
+        "Type": "SiTagAPI_1._0.DTOs.UpdateFarmDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.ServiceController",
+    "Method": "CreateService",
+    "RelativePath": "api/Service/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceDto",
+        "Type": "SiTagAPI_1._0.DTOs.CreateServiceDto",
         "IsRequired": true
       }
     ],
