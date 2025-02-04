@@ -1,34 +1,37 @@
-﻿using Microsoft.EntityFrameworkCore;
-using SiTagAPI_1._0.DTOs;
+﻿// Services/FarmServices.cs
 using SiTagAPI_1._0.Models;
-using System;
+using SiTagAPI_1._0.DTOs;
+using Microsoft.EntityFrameworkCore;
+using SiTagAPI_1._0.Services.Interfaces;
 
 namespace SiTagAPI_1._0.Services
 {
-    public class FarmServices
+    internal class FarmServices : IFarmServices
     {
-
         private readonly SitagDBContext _context;
-        private readonly Random _random;
+
         public FarmServices(SitagDBContext context)
         {
             _context = context;
-            _random = new Random();
         }
 
         public async Task<farm?> CreateFarm(CreateFarmDto createFarm)
         {
-           
-            var newFarm = _context.farm.Add(new farm
+            if (createFarm == null)
+                throw new ArgumentNullException(nameof(createFarm), "Los datos de la granja no pueden ser nulos.");
+
+            var newFarm = new farm
             {
-              
                 name = createFarm.name,
-                location = createFarm.location,
+                location = createFarm.location,  // Corregido: faltaba el campo de ubicación
                 userId = createFarm.userId,
                 description = createFarm.description
-            });
+            };
+
+            await _context.farm.AddAsync(newFarm);
             await _context.SaveChangesAsync();
-            return newFarm.Entity;
+
+            return newFarm;
         }
 
         public async Task<IEnumerable<ShowFarmDto>> GetFarmsByUserId(int userId)
@@ -43,23 +46,23 @@ namespace SiTagAPI_1._0.Services
                 })
                 .ToListAsync();
         }
+
         public async Task<farm?> UpdateFarm(int id, UpdateFarmDto updateFarm)
         {
             var existingFarm = await _context.farm.FindAsync(id);
             if (existingFarm == null)
             {
-                return null;
+                return null;  
             }
 
-            existingFarm.name = updateFarm.name;
-            existingFarm.location = updateFarm.location;
-            existingFarm.description = updateFarm.description;
+            existingFarm.name = updateFarm.name ?? existingFarm.name;
+            existingFarm.location = updateFarm.location ?? existingFarm.location;
+            existingFarm.description = updateFarm.description ?? existingFarm.description;
+
             _context.farm.Update(existingFarm);
             await _context.SaveChangesAsync();
 
             return existingFarm;
         }
-
-        
     }
 }

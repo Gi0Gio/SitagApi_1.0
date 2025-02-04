@@ -3,6 +3,7 @@ using SiTagAPI_1._0.DTOs;
 using SiTagAPI_1._0.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using SiTagAPI_1._0.Services.Interfaces;
 
 namespace SiTagAPI_1._0.Controllers
 {
@@ -11,9 +12,9 @@ namespace SiTagAPI_1._0.Controllers
     
     public class DataController : ControllerBase
     {
-        private readonly DataServices _dataServices;
+        private readonly IDataServices _dataServices;
 
-        public DataController(DataServices dataServices)
+        public DataController(IDataServices dataServices)
         {
             _dataServices = dataServices;
         }
@@ -37,6 +38,17 @@ namespace SiTagAPI_1._0.Controllers
                 return NotFound($"El Animal con Id:  {animalid} no tiene registros");
             }
             return Ok(data);
+        }
+
+        [HttpDelete("deleteData/{id}")]
+        public async Task<IActionResult> DeleteData(int id)
+        {
+            var data = await _dataServices.DeleteData(id);
+            if (data == null)
+            {
+                return NotFound();
+            }
+            return NoContent();
         }
     }
 }

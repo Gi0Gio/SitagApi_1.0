@@ -13,4 +13,20 @@
         public string color { get; set; }
         public DateTime birthdate { get; set; }
     }
+
+    public class getAnimalDto
+    {
+        public string number { get; set; }
+
+        public byte sex { get; set; }
+
+        public string race { get; set; }
+
+        public string specie { get; set; }
+
+        public string color { get; set; }
+        public DateTime birthdate { get; set; }
+
+    }
+
 }
