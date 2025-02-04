@@ -2,6 +2,7 @@
 using SiTagAPI_1._0.DTOs;
 using SiTagAPI_1._0.Models;
 using SiTagAPI_1._0.Services;
+using SiTagAPI_1._0.Services.Interfaces;
 
 namespace SiTagAPI_1._0.Controllers
 {
@@ -9,9 +10,9 @@ namespace SiTagAPI_1._0.Controllers
     [ApiController]
     public class FarmController : ControllerBase
     {
-        private readonly FarmServices _farmServices;
+        private readonly IFarmServices _farmServices;
 
-        public FarmController(FarmServices farmServices)
+        public FarmController(IFarmServices farmServices)
         {
             _farmServices = farmServices;
         }

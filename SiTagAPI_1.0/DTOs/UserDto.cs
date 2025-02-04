@@ -14,4 +14,15 @@
         public string email { get; set; }
         public string password { get; set; }
     }
+
+    public class UpdatePasswordDto
+    {
+        public string password { get; set; }
+    }
+
+
+    public class  UpdateEmailDto
+    {
+        public string email { get; set; }
+    }
 }

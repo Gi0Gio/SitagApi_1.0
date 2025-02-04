@@ -4,10 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Security.Cryptography;
 using System.Text;
+using SiTagAPI_1._0.Services.Interfaces;
 
 namespace SiTagAPI_1._0.Services
 {
-    public class AuthServices
+    internal class AuthServices: IAuthServices
     {
         private readonly SitagDBContext _context;
         private readonly Random _random;
@@ -19,39 +20,50 @@ namespace SiTagAPI_1._0.Services
         }
         public async Task<user?> Login(LoginUserDto loginUser)
         {
+            if (loginUser == null || string.IsNullOrWhiteSpace(loginUser.email) || string.IsNullOrWhiteSpace(loginUser.password))
+                throw new ArgumentException("El correo electrónico y la contraseña son obligatorios.");
+
             var user = await _context.user.FirstOrDefaultAsync(u => u.email == loginUser.email);
-            if (user == null)
+            if (user == null || user.password != HashPassword(loginUser.password))
             {
-                return null;
+                return null; // Retorna null si no existe o la contraseña es incorrecta
             }
-            if (user.password != HashPassword(loginUser.password))
-            {
-                return null;
-            }
+
             return user;
         }
 
         public async Task<user?> Register(RegisterUserDto registerUser)
         {
-         
-            var newUser = _context.user.Add(new user
+            if (registerUser == null)
+                throw new ArgumentNullException(nameof(registerUser), "La información del usuario no puede ser nula.");
+
+            if (await _context.user.AnyAsync(u => u.email == registerUser.email))
+                throw new InvalidOperationException("El correo electrónico ya está registrado.");
+
+            var newUser = new user
             {
                 name = registerUser.name,
                 lastName = registerUser.lastName,
                 email = registerUser.email,
                 password = HashPassword(registerUser.password),
                 cellphone = registerUser.cellphone
-            });
+            };
+
+            await _context.user.AddAsync(newUser);
             await _context.SaveChangesAsync();
-            return newUser.Entity;
+
+            return newUser;
         }
 
         private string HashPassword(string password)
         {
+            if (string.IsNullOrWhiteSpace(password))
+                throw new ArgumentException("La contraseña no puede estar vacía.", nameof(password));
+
             using (var sha256 = SHA256.Create())
             {
                 var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+                return Convert.ToHexString(hashedBytes).ToLowerInvariant();
             }
         }
     }

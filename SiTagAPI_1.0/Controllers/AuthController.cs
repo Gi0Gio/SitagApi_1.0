@@ -7,6 +7,7 @@ using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using SiTagAPI_1._0.Services.Interfaces;
 
 namespace SiTagAPI_1._0.Controllers
 {
@@ -14,10 +15,10 @@ namespace SiTagAPI_1._0.Controllers
     [ApiController]
     public class AuthController: ControllerBase
     {
-        private readonly AuthServices _authServices;
+        private readonly IAuthServices _authServices;
 
         private IConfiguration config;
-        public AuthController(AuthServices authServices, IConfiguration config)
+        public AuthController(IAuthServices authServices, IConfiguration config)
         {
             _authServices = authServices;
             this.config = config;

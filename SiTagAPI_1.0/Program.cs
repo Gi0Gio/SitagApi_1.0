@@ -4,6 +4,7 @@ using SiTagAPI_1._0.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using SiTagAPI_1._0.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,11 +19,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SitagDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<AuthServices>();
-builder.Services.AddScoped<FarmServices>();
-builder.Services.AddScoped<DivisionServices>();
-builder.Services.AddScoped<AnimalServices>();
-builder.Services.AddScoped<DataServices>();
+builder.Services.AddScoped<IAuthServices,AuthServices>();
+builder.Services.AddScoped<IFarmServices,FarmServices>();
+builder.Services.AddScoped<IDivisionServices,DivisionServices>();
+builder.Services.AddScoped<IAnimalServices,AnimalServices>();
+builder.Services.AddScoped<IDataServices,DataServices>();
+builder.Services.AddScoped<IUserServices,UserServices>();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters

@@ -2,6 +2,7 @@
 using SiTagAPI_1._0.DTOs;
 using SiTagAPI_1._0.Models;
 using SiTagAPI_1._0.Services;
+using SiTagAPI_1._0.Services.Interfaces;
 
 namespace SiTagAPI_1._0.Controllers
 {
@@ -10,8 +11,8 @@ namespace SiTagAPI_1._0.Controllers
     public class DivisionController: ControllerBase
     {
     
-        private readonly DivisionServices _divisionServices;
-        public DivisionController(DivisionServices divisionServices)
+        private readonly IDivisionServices _divisionServices;
+        public DivisionController(IDivisionServices divisionServices)
         {
             _divisionServices = divisionServices;
         }

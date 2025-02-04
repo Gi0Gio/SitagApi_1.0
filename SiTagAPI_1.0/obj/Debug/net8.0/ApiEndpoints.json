@@ -26,6 +26,48 @@
     ]
   },
   {
+    "ContainingType": "SiTagAPI_1._0.Controllers.AnimalController",
+    "Method": "DeleteAnimal",
+    "RelativePath": "api/Animal/deleteAnimal/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.AnimalController",
+    "Method": "GetAnimalById",
+    "RelativePath": "api/Animal/GetAnimalById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SiTagAPI_1._0.DTOs.getAnimalDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SiTagAPI_1._0.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -68,6 +110,22 @@
       {
         "Name": "dataDto",
         "Type": "SiTagAPI_1._0.DTOs.CreateDataDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.DataController",
+    "Method": "DeleteData",
+    "RelativePath": "api/Data/deleteData/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -209,5 +267,87 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.UserController",
+    "Method": "UpdateEmail",
+    "RelativePath": "api/User/updateEmail/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SiTagAPI_1._0.DTOs.UpdateEmailDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.UserController",
+    "Method": "UpdatePassword",
+    "RelativePath": "api/User/updatePassword/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SiTagAPI_1._0.DTOs.UpdatePasswordDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.AnimalController",
+    "Method": "GetAllAnimals",
+    "RelativePath": "GetAllAnimals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SiTagAPI_1._0.DTOs.getAnimalDto, SiTagAPI_1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

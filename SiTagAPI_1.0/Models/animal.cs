@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace SiTagAPI_1._0.Models;
@@ -39,8 +40,10 @@ public partial class animal
     public DateTime birthdate { get; set; }
 
     [InverseProperty("animal")]
+    [JsonIgnore]
     public virtual ICollection<data> data { get; set; } = new List<data>();
 
     [InverseProperty("animal")]
+    [JsonIgnore]
     public virtual ICollection<service> service { get; set; } = new List<service>();
 }
