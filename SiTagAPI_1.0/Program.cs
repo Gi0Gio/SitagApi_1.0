@@ -16,15 +16,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Register the DBContext
-builder.Services.AddDbContext<SitagDBContext>(options =>
+builder.Services.AddDbContext<SitagDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IAuthServices,AuthServices>();
 builder.Services.AddScoped<IFarmServices,FarmServices>();
-builder.Services.AddScoped<IDivisionServices,DivisionServices>();
+builder.Services.AddScoped<IDivisionServices,FarmDivisionServices>();
 builder.Services.AddScoped<IAnimalServices,AnimalServices>();
-builder.Services.AddScoped<IDataServices,DataServices>();
+builder.Services.AddScoped<IDataServices,AnimalDataServices>();
 builder.Services.AddScoped<IUserServices,UserServices>();
+builder.Services.AddScoped<IMedicalService, MedicalServiceServices>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {

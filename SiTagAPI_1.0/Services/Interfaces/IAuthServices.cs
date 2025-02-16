@@ -5,7 +5,7 @@ namespace SiTagAPI_1._0.Services.Interfaces
 {
     public interface IAuthServices
     {
-        Task<user?> Login(LoginUserDto loginUser);
-        Task<user?> Register(RegisterUserDto registerUser);
+        Task<User?> Login(LoginUserDto loginUser);
+        Task<User?> Register(RegisterUserDto registerUser);
     }
 }

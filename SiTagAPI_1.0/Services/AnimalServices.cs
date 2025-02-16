@@ -7,28 +7,28 @@ namespace SiTagAPI_1._0.Services
 {
     internal class AnimalServices : IAnimalServices
     {
-        private readonly SitagDBContext _context;
-        public AnimalServices(SitagDBContext context)
+        private readonly SitagDbContext _context;
+        public AnimalServices(SitagDbContext context)
         {
             _context = context;
         }
 
-        public async Task<animal?> CreateAnimal(CreateAnimalDto createAnimal)
+        public async Task<Animal?> CreateAnimal(CreateAnimalDto createAnimal)
         {
             if (createAnimal == null)
                 throw new ArgumentNullException(nameof(createAnimal), "Los datos del animal no pueden ser nulos.");
 
-            var newAnimal = new animal
+            var newAnimal = new Animal
             {
-                number = createAnimal.number,
-                sex = createAnimal.sex,
-                race = createAnimal.race,
-                specie = createAnimal.specie,
-                color = createAnimal.color,
-                birthdate = createAnimal.birthdate
+                Number = createAnimal.number,
+                Sex = createAnimal.sex,
+                Race = createAnimal.race,
+                Specie = createAnimal.specie,
+                Color = createAnimal.color,
+                Birthdate = DateOnly.FromDateTime(createAnimal.birthdate)
             };
 
-            await _context.animal.AddAsync(newAnimal);
+            await _context.Animals.AddAsync(newAnimal);
             await _context.SaveChangesAsync();
 
             return newAnimal;
@@ -36,20 +36,20 @@ namespace SiTagAPI_1._0.Services
 
         public async Task<bool> DeleteAnimal(int id)
         {
-            var animal = await _context.animal.FindAsync(id);
+            var animal = await _context.Animals.FindAsync(id);
             if (animal == null)
             {
                 return false; 
             }
 
-            _context.animal.Remove(animal);
+            _context.Animals.Remove(animal);
             await _context.SaveChangesAsync();
             return true;
         }
 
         public async Task<getAnimalDto?> GetAnimalById(int id)
         {
-            var animal = await _context.animal.FindAsync(id);
+            var animal = await _context.Animals.FindAsync(id);
             if (animal == null)
             {
                 return null; 
@@ -57,26 +57,26 @@ namespace SiTagAPI_1._0.Services
 
             return new getAnimalDto
             {
-                number = animal.number,
-                race = animal.race,
-                sex = animal.sex,
-                specie = animal.specie,
-                color = animal.color,
-                birthdate = animal.birthdate
+                number = animal.Number,
+                race = animal.Race,
+                sex = animal.Sex,
+                specie = animal.Specie,
+                color = animal.Color,
+                birthdate = animal.Birthdate.ToDateTime(TimeOnly.MinValue)
             };
         }
 
         public async Task<List<getAnimalDto>> GetAllAnimals()
         {
-            return await _context.animal
+            return await _context.Animals
                 .Select(animal => new getAnimalDto
                 {
-                    number = animal.number,
-                    sex = animal.sex,
-                    race = animal.race,
-                    specie = animal.specie,
-                    color = animal.color,
-                    birthdate = animal.birthdate
+                    number = animal.Number,
+                    sex = animal.Sex,
+                    race = animal.Race,
+                    specie = animal.Specie,
+                    color = animal.Color,
+                    birthdate = animal.Birthdate.ToDateTime(TimeOnly.MinValue)
                 })
                 .ToListAsync();
         }

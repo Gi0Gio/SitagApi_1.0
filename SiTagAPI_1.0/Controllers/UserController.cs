@@ -16,6 +16,10 @@ namespace SiTagAPI_1._0.Controllers
             _userServices = userServices;
         }
 
+
+        // Endpoints
+
+        // PUT: api/User/updateEmail/{id}
         [HttpPut("updateEmail/{id}")]
         public async Task<ActionResult<UpdateEmailDto>> UpdateEmail(int id, string newEmail)
         {
@@ -26,6 +30,7 @@ namespace SiTagAPI_1._0.Controllers
             }
             return result;
         }
+        // PUT: api/User/updatePassword/{id}
         [HttpPut("updatePassword/{id}")]
         public async Task<ActionResult<UpdatePasswordDto>> UpdatePassword(int id, string newPassword)
         {

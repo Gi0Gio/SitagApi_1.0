@@ -16,13 +16,17 @@ namespace SiTagAPI_1._0.Controllers
         {
             _farmServices = farmServices;
         }
+        // Endpoints
 
+        // POST: api/Farm/addFarm
         [HttpPost("addFarm")]
         public async Task<IActionResult> CreateFarm(CreateFarmDto farmDto)
         {
             var farm = await _farmServices.CreateFarm(farmDto);
             return CreatedAtAction(nameof(CreateFarm), farm);
         }
+
+        // GET: api/Farm/getFarmsByUserId/{userId}
         [HttpGet("getFarmsByUserId/{userId}")]
         public async Task<IActionResult> GetFarmsByUserId(int userId)
         {
@@ -37,7 +41,8 @@ namespace SiTagAPI_1._0.Controllers
         }
 
 
-        [HttpPut("updateAnimal")]
+        // PUT: api/Farm/updateFarm/{id}
+        [HttpPut("updateFarm/{id}")]
         public async Task<IActionResult> UpdateFarm(int id, UpdateFarmDto farmDto)
         {
             var farm = await _farmServices.UpdateFarm(id, farmDto);

@@ -5,8 +5,8 @@ namespace SiTagAPI_1._0.Services.Interfaces
 {
     public interface IFarmServices
     {
-        Task<farm?> CreateFarm(CreateFarmDto createFarm);
+        Task<Farm?> CreateFarm(CreateFarmDto createFarm);
         Task<IEnumerable<ShowFarmDto>> GetFarmsByUserId(int userId);
-        Task<farm?> UpdateFarm(int id, UpdateFarmDto updateFarm);
+        Task<Farm?> UpdateFarm(int id, UpdateFarmDto updateFarm);
     }
 }

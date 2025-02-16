@@ -35,17 +35,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/animal"
+                  "$ref": "#/components/schemas/Animal"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/animal"
+                  "$ref": "#/components/schemas/Animal"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/animal"
+                  "$ref": "#/components/schemas/Animal"
                 }
               }
             }
@@ -116,7 +116,7 @@
         }
       }
     },
-    "/GetAllAnimals": {
+    "/api/Animal/GetAllAnimals": {
       "get": {
         "tags": [
           "Animal"
@@ -154,72 +154,10 @@
         }
       }
     },
-    "/api/Auth/register": {
+    "/api/AnimalData/addAnimalInfo": {
       "post": {
         "tags": [
-          "Auth"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterUserDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterUserDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterUserDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Auth/login": {
-      "post": {
-        "tags": [
-          "Auth"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginUserDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginUserDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginUserDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Data/addAnimalInfo": {
-      "post": {
-        "tags": [
-          "Data"
+          "AnimalData"
         ],
         "requestBody": {
           "content": {
@@ -247,10 +185,10 @@
         }
       }
     },
-    "/api/Data/getAnimalRecord/{animalid}": {
+    "/api/AnimalData/getAnimalRecord/{animalid}": {
       "get": {
         "tags": [
-          "Data"
+          "AnimalData"
         ],
         "parameters": [
           {
@@ -270,10 +208,10 @@
         }
       }
     },
-    "/api/Data/deleteData/{id}": {
+    "/api/AnimalData/deleteData/{id}": {
       "delete": {
         "tags": [
-          "Data"
+          "AnimalData"
         ],
         "parameters": [
           {
@@ -293,98 +231,64 @@
         }
       }
     },
-    "/api/Division": {
+    "/api/Auth/Register": {
       "post": {
         "tags": [
-          "Division"
+          "Auth"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDivisionDto"
+                "$ref": "#/components/schemas/RegisterUserDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDivisionDto"
+                "$ref": "#/components/schemas/RegisterUserDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDivisionDto"
+                "$ref": "#/components/schemas/RegisterUserDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/division"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/division"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/division"
-                }
-              }
-            }
+            "description": "Success"
           }
         }
       }
     },
-    "/api/Division/getDivisionsByFarmId": {
-      "get": {
+    "/api/Auth/Login": {
+      "post": {
         "tags": [
-          "Division"
+          "Auth"
         ],
-        "parameters": [
-          {
-            "name": "farmId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShowDivisionDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShowDivisionDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShowDivisionDto"
-                  }
-                }
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginUserDto"
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -443,7 +347,7 @@
         }
       }
     },
-    "/api/Farm/updateAnimal": {
+    "/api/Farm/updateFarm/{id}": {
       "put": {
         "tags": [
           "Farm"
@@ -451,7 +355,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -484,10 +389,107 @@
         }
       }
     },
-    "/api/Service/create": {
+    "/api/FarmDivision": {
       "post": {
         "tags": [
-          "Service"
+          "FarmDivision"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDivisionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDivisionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDivisionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FarmDivision"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FarmDivision"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FarmDivision"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/FarmDivision/getDivisionsByFarmId/{farmId}": {
+      "get": {
+        "tags": [
+          "FarmDivision"
+        ],
+        "parameters": [
+          {
+            "name": "farmId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShowDivisionDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShowDivisionDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShowDivisionDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/MedicalService/addMedicaLService": {
+      "post": {
+        "tags": [
+          "MedicalService"
         ],
         "requestBody": {
           "content": {
@@ -508,6 +510,29 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/MedicalService/getPreviousServices/{animalId}": {
+      "get": {
+        "tags": [
+          "MedicalService"
+        ],
+        "parameters": [
+          {
+            "name": "animalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -612,6 +637,118 @@
   },
   "components": {
     "schemas": {
+      "Activity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "animalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "$ref": "#/components/schemas/DateOnly"
+          },
+          "animal": {
+            "$ref": "#/components/schemas/Animal"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Animal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "number": {
+            "type": "string",
+            "nullable": true
+          },
+          "sex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "race": {
+            "type": "string",
+            "nullable": true
+          },
+          "specie": {
+            "type": "string",
+            "nullable": true
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthdate": {
+            "$ref": "#/components/schemas/DateOnly"
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Activity"
+            },
+            "nullable": true
+          },
+          "animalData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnimalDatum"
+            },
+            "nullable": true
+          },
+          "medicalServices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MedicalService"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AnimalDatum": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "animalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight": {
+            "type": "string",
+            "nullable": true
+          },
+          "entryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "divisionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "state": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateAnimalDto": {
         "type": "object",
         "properties": {
@@ -707,17 +844,169 @@
             "type": "integer",
             "format": "int32"
           },
-          "type": {
+          "drug": {
             "type": "string",
             "nullable": true
           },
-          "description": {
+          "reason": {
             "type": "string",
             "nullable": true
           },
           "date": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateOnly": {
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "day": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dayOfWeek": {
+            "$ref": "#/components/schemas/DayOfWeek"
+          },
+          "dayOfYear": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "dayNumber": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DayOfWeek": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Farm": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "farmDivisions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FarmDivision"
+            },
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FarmDivision": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "farmId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "animalData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnimalDatum"
+            },
+            "nullable": true
+          },
+          "farm": {
+            "$ref": "#/components/schemas/Farm"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Finance": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "date": {
+            "$ref": "#/components/schemas/DateOnly"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sender": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
           }
         },
         "additionalProperties": false
@@ -732,6 +1021,34 @@
           "password": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MedicalService": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "animalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "drug": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "$ref": "#/components/schemas/DateOnly"
+          },
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "animal": {
+            "$ref": "#/components/schemas/Animal"
           }
         },
         "additionalProperties": false
@@ -810,122 +1127,7 @@
         },
         "additionalProperties": false
       },
-      "animal": {
-        "required": [
-          "color",
-          "number",
-          "race",
-          "specie"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "number": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "sex": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "race": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "specie": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "color": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "birthdate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "data": {
-        "required": [
-          "weight"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "animal_id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "weight": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "entryDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "divisionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "state": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "division": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "farmId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/data"
-            },
-            "nullable": true
-          },
-          "farm": {
-            "$ref": "#/components/schemas/farm"
-          }
-        },
-        "additionalProperties": false
-      },
-      "farm": {
-        "required": [
-          "description",
-          "location",
-          "name"
-        ],
+      "User": {
         "type": "object",
         "properties": {
           "id": {
@@ -933,33 +1135,38 @@
             "format": "int32"
           },
           "name": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
-          "location": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
+          "lastName": {
+            "type": "string",
+            "nullable": true
           },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
+          "email": {
+            "type": "string",
+            "nullable": true
           },
-          "description": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
+          "password": {
+            "type": "string",
+            "nullable": true
           },
-          "division": {
+          "cellphone": {
+            "type": "string",
+            "nullable": true
+          },
+          "farms": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/division"
+              "$ref": "#/components/schemas/Farm"
             },
             "nullable": true
           },
-          "user": {
-            "$ref": "#/components/schemas/user"
+          "finances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Finance"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -990,104 +1197,6 @@
           "birthdate": {
             "type": "string",
             "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "record": {
-        "required": [
-          "category",
-          "description"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "category": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "_for": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "description": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "user": {
-            "$ref": "#/components/schemas/user"
-          }
-        },
-        "additionalProperties": false
-      },
-      "user": {
-        "required": [
-          "cellphone",
-          "email",
-          "lastName",
-          "name",
-          "password"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "lastName": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "email": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "password": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string"
-          },
-          "cellphone": {
-            "maxLength": 45,
-            "minLength": 0,
-            "type": "string"
-          },
-          "farm": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/farm"
-            },
-            "nullable": true
-          },
-          "record": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/record"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false

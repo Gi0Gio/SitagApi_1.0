@@ -17,14 +17,19 @@ namespace SiTagAPI_1._0.Controllers
         }
 
 
+        // Endpoints
+
+        // POST: api/Animal/addAnimal
+
         [HttpPost("addAnimal")]
-        public async Task<ActionResult<animal>> CreateAnimal(CreateAnimalDto createAnimal)
+        public async Task<ActionResult<Animal>> CreateAnimal(CreateAnimalDto createAnimal)
         {
             var newAnimal = await _animalServices.CreateAnimal(createAnimal);
             return CreatedAtAction(nameof(CreateAnimal), newAnimal);
         }
 
-
+        // DELETE: api/Animal/deleteAnimal/{id}
+        
         [HttpDelete("deleteAnimal/{id}")]
         public async Task<IActionResult> DeleteAnimal(int id)
         {
@@ -38,6 +43,8 @@ namespace SiTagAPI_1._0.Controllers
             return NoContent();
         }
 
+
+        // GET: api/Animal/GetAnimalById/{id}
         [HttpGet("GetAnimalById/{id}")]
         public async Task<ActionResult<getAnimalDto>> GetAnimalById(int id)
         {
@@ -51,7 +58,8 @@ namespace SiTagAPI_1._0.Controllers
             return Ok(animal);
         }
 
-        [HttpGet("/GetAllAnimals")]
+        // GET: api/Animal/GetAllAnimals
+        [HttpGet("GetAllAnimals")]
         public async Task<ActionResult<List<getAnimalDto>>> GetAllAnimals()
         {
             var animals = await _animalServices.GetAllAnimals();

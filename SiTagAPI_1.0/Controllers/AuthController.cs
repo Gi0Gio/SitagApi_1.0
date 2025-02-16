@@ -24,14 +24,21 @@ namespace SiTagAPI_1._0.Controllers
             this.config = config;
         }
 
-        [HttpPost("register")]
+        // Endpoints
+
+        // POST: api/Auth/Register
+
+        [HttpPost("Register")]
         public async Task<IActionResult> Register(RegisterUserDto userDto)
         {
             var user = await _authServices.Register(userDto);
             return CreatedAtAction(nameof(Register), user);
         }
 
-        [HttpPost("login")]
+
+        // POST: api/Auth/Login
+
+        [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginUserDto userDto)
         {
             var user = await _authServices.Login(userDto);
@@ -39,8 +46,8 @@ namespace SiTagAPI_1._0.Controllers
             {
                 return BadRequest("Tu Correo o Contrasena estan malos, a quien le quieres robar hijupuita");
             }
-            string jwtToken = GenerateToken(user); // ya valio vrg el jwt usar cookies para guardar del lado del cliente cookie http only .
-            return Ok(new { token = jwtToken });
+            /*string jwtToken = GenerateToken(user);*/ // ya valio vrg el jwt usar cookies para guardar del lado del cliente cookie http only .
+            return Ok();
             
         }
 
@@ -56,24 +63,24 @@ namespace SiTagAPI_1._0.Controllers
         //    });
         //}
 
-        private string GenerateToken(user loggeduser)
-        {
-            var claims = new[]
-            {
-            new Claim(ClaimTypes.Name, loggeduser.name),
-            new Claim(ClaimTypes.Email, loggeduser.email),
-        };
+        //private string GenerateToken(User loggeduser)
+        //{
+        //    var claims = new[]
+        //    {
+        //    new Claim(ClaimTypes.Name, loggeduser.name),
+        //    new Claim(ClaimTypes.Email, loggeduser.email),
+        //};
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection("JWT:Key").Value));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-            var securityToken = new JwtSecurityToken(
-                claims: claims,
-                expires: DateTime.Now.AddMinutes(60),
-                signingCredentials: creds
-                );
-            string token = new JwtSecurityTokenHandler().WriteToken(securityToken);
-            return token;
-        }
+        //    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection("JWT:Key").Value));
+        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+        //    var securityToken = new JwtSecurityToken(
+        //        claims: claims,
+        //        expires: DateTime.Now.AddMinutes(60),
+        //        signingCredentials: creds
+        //        );
+        //    string token = new JwtSecurityTokenHandler().WriteToken(securityToken);
+        //    return token;
+        //}
 
     }
 }

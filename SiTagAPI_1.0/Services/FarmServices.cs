@@ -8,27 +8,27 @@ namespace SiTagAPI_1._0.Services
 {
     internal class FarmServices : IFarmServices
     {
-        private readonly SitagDBContext _context;
+        private readonly SitagDbContext _context;
 
-        public FarmServices(SitagDBContext context)
+        public FarmServices(SitagDbContext context)
         {
             _context = context;
         }
 
-        public async Task<farm?> CreateFarm(CreateFarmDto createFarm)
+        public async Task<Farm?> CreateFarm(CreateFarmDto createFarm)
         {
             if (createFarm == null)
                 throw new ArgumentNullException(nameof(createFarm), "Los datos de la granja no pueden ser nulos.");
 
-            var newFarm = new farm
+            var newFarm = new Farm
             {
-                name = createFarm.name,
-                location = createFarm.location,  // Corregido: faltaba el campo de ubicación
-                userId = createFarm.userId,
-                description = createFarm.description
+                Name = createFarm.name,
+                Location = createFarm.location,  // Corregido: faltaba el campo de ubicación
+                UserId = createFarm.userId,
+                Description = createFarm.description
             };
 
-            await _context.farm.AddAsync(newFarm);
+            await _context.Farms.AddAsync(newFarm);
             await _context.SaveChangesAsync();
 
             return newFarm;
@@ -36,30 +36,30 @@ namespace SiTagAPI_1._0.Services
 
         public async Task<IEnumerable<ShowFarmDto>> GetFarmsByUserId(int userId)
         {
-            return await _context.farm
-                .Where(f => f.userId == userId)
+            return await _context.Farms
+                .Where(f => f.UserId == userId)
                 .Select(f => new ShowFarmDto
                 {
-                    name = f.name,
-                    location = f.location,
-                    description = f.description
+                    name = f.Name,
+                    location = f.Location,
+                    description = f.Description
                 })
                 .ToListAsync();
         }
 
-        public async Task<farm?> UpdateFarm(int id, UpdateFarmDto updateFarm)
+        public async Task<Farm?> UpdateFarm(int id, UpdateFarmDto updateFarm)
         {
-            var existingFarm = await _context.farm.FindAsync(id);
+            var existingFarm = await _context.Farms.FindAsync(id);
             if (existingFarm == null)
             {
                 return null;  
             }
 
-            existingFarm.name = updateFarm.name ?? existingFarm.name;
-            existingFarm.location = updateFarm.location ?? existingFarm.location;
-            existingFarm.description = updateFarm.description ?? existingFarm.description;
+            existingFarm.Name = updateFarm.name ?? existingFarm.Name;
+            existingFarm.Location = updateFarm.location ?? existingFarm.Location;
+            existingFarm.Description = updateFarm.description ?? existingFarm.Description;
 
-            _context.farm.Update(existingFarm);
+            _context.Farms.Update(existingFarm);
             await _context.SaveChangesAsync();
 
             return existingFarm;
