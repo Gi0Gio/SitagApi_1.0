@@ -44,14 +44,20 @@
   {
     "ContainingType": "SiTagAPI_1._0.Controllers.AnimalController",
     "Method": "GetAllAnimals",
-    "RelativePath": "api/Animal/GetAllAnimals",
+    "RelativePath": "api/Animal/GetAllUserAnimals/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[SiTagAPI_1._0.DTOs.getAnimalDto, SiTagAPI_1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[SiTagAPI_1._0.DTOs.getAllUserAnimalsDto, SiTagAPI_1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -129,6 +135,48 @@
     "Parameters": [
       {
         "Name": "animalid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.AnimalDataController",
+    "Method": "SwitchDivision",
+    "RelativePath": "api/AnimalData/switchDivision/{animalId}/{newDivision}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "animalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newDivision",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.AnimalDataController",
+    "Method": "UpdateAnimalState",
+    "RelativePath": "api/AnimalData/updateState/{animalId}/{newState}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "animalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newState",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -9,7 +9,7 @@ namespace SiTagAPI_1._0.Services
     {
 
         private readonly SitagDbContext _context;
-        public  AnimalDataServices(SitagDbContext context)
+        public AnimalDataServices(SitagDbContext context)
         {
             _context = context;
         }
@@ -66,6 +66,120 @@ namespace SiTagAPI_1._0.Services
             await _context.SaveChangesAsync();
 
             return true;
+        }
+
+        public async Task<bool> UpdateAnimalState(int animalId, int newState)
+        {
+            try
+            {
+
+                var lastAnimalData = await _context.AnimalData
+                    .Where(ad => ad.AnimalId == animalId)
+                    .OrderByDescending(ad => ad.EntryDate)
+                    .FirstOrDefaultAsync();
+
+                if (lastAnimalData == null)
+                {
+                    return false;
+                }
+
+
+                var newAnimalData = new AnimalDatum
+                {
+                    AnimalId = lastAnimalData.AnimalId,
+                    DivisionId = lastAnimalData.DivisionId,
+                    Weight = lastAnimalData.Weight,
+                    State = newState,
+                    EntryDate = DateTime.UtcNow
+                };
+
+
+                _context.AnimalData.Add(newAnimalData);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en UpdateAnimalState: {ex.Message}");
+                return false;
+            }
+        }
+
+
+        public async Task<bool> SwitchDivision(int animalId, int newDivision)
+        {
+            try
+            {
+               var division = await _context.FarmDivisions
+                    .Where(fd => fd.Id == newDivision)
+                    .FirstOrDefaultAsync();
+                if (division == null)
+                {
+                    return false;
+                }
+
+                var lastAnimalData = await _context.AnimalData
+                    .Where(ad => ad.AnimalId == animalId)
+                    .OrderByDescending(ad => ad.EntryDate)
+                    .FirstOrDefaultAsync();
+
+                if (lastAnimalData == null)
+                {
+                    return false; 
+                }
+
+                
+                var farm = await (from f in _context.Farms
+                                  join fd in _context.FarmDivisions on f.Id equals fd.FarmId
+                                  where fd.Id == lastAnimalData.DivisionId
+                                  select f)
+                                  .FirstOrDefaultAsync();
+
+                if (farm == null)
+                {
+                    return false;
+                }
+
+               
+                var newFarmDivision = await _context.FarmDivisions
+                    .Where(fd => fd.Id == newDivision)
+                    .FirstOrDefaultAsync();
+
+                if (newFarmDivision == null)
+                {
+                    return false; 
+                }
+
+               
+                var newFarm = await _context.Farms
+                    .Where(f => f.Id == newFarmDivision.FarmId)
+                    .FirstOrDefaultAsync();
+
+                if (newFarm == null || newFarm.UserId != farm.UserId)
+                {
+                    return false; 
+                }
+
+                
+                var newAnimalData = new AnimalDatum
+                {
+                    AnimalId = lastAnimalData.AnimalId,
+                    DivisionId = newDivision, 
+                    Weight = lastAnimalData.Weight,
+                    State = lastAnimalData.State,
+                    EntryDate = DateTime.UtcNow
+                };
+
+                _context.AnimalData.Add(newAnimalData);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en SwitchDivision: {ex.Message}");
+                return false;
+            }
         }
 
     }

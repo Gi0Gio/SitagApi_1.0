@@ -9,7 +9,7 @@ namespace SiTagAPI_1._0.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
+
     public class AnimalDataController : ControllerBase
     {
         private readonly IDataServices _dataServices;
@@ -35,10 +35,10 @@ namespace SiTagAPI_1._0.Controllers
 
 
         [HttpGet("getAnimalRecord/{animalid}")]
-        
+
         public async Task<IActionResult> GetAnimalRecord(int animalid)
         {
-            
+
             var data = await _dataServices.GetAnimalRecord(animalid);
             if (data == null || !data.Any())
             {
@@ -53,7 +53,32 @@ namespace SiTagAPI_1._0.Controllers
         public async Task<IActionResult> DeleteData(int id)
         {
             var data = await _dataServices.DeleteData(id);
-            if (data == null)
+            if (data == false)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+
+        // POST: api/AnimalData/updateState/{animalId}/{newState}
+        [HttpPost("updateState/{animalId}/{newState}")]
+        public async Task<IActionResult> UpdateAnimalState(int animalId, int newState)
+        {
+            var data = await _dataServices.UpdateAnimalState(animalId, newState);
+            if (data == false)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+
+
+        // POST: api/AnimalData/switchDivision/{animalId}/{newDivision}
+        [HttpPost("switchDivision/{animalId}/{newDivision}")]
+        public async Task<IActionResult> SwitchDivision(int animalId, int newDivision)
+        {
+            var data = await _dataServices.SwitchDivision(animalId, newDivision);
+            if (data == false)
             {
                 return NotFound();
             }

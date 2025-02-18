@@ -26,7 +26,7 @@ namespace SiTagAPI_1._0.Controllers
             return CreatedAtAction(nameof(CreateFarm), farm);
         }
 
-        // GET: api/Farm/getFarmsByUserId/{userId}
+        // GET: api/Farm/getFarmsByUserId/{userId} corregir buscar animales de la division.
         [HttpGet("getFarmsByUserId/{userId}")]
         public async Task<IActionResult> GetFarmsByUserId(int userId)
         {

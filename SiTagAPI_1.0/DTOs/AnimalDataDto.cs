@@ -26,4 +26,17 @@
 
 
     }
+
+    public class UpdateDivision
+    {
+        public int divisionId { get; set; }
+
+    }
+
+    public class UpdateState
+    {
+        public int state { get; set; }
+    }
+
+
 }

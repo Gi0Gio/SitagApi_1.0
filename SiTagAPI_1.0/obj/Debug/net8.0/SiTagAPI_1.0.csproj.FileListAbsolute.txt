@@ -313,9 +313,9 @@ C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\staticweb
 C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.SiTagAPI_1.0.props
 C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.SiTagAPI_1.0.props
 C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\SiTagAPI.4A70132A.Up2Date
 C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\SiTagAPI_1.0.genruntimeconfig.cache
 C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\ref\SiTagAPI_1.0.dll
 C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\evers\Source\Repos\SitagApi_1.0\SiTagAPI_1.0\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

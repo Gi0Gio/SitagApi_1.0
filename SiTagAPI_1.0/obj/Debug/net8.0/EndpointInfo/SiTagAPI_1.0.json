@@ -116,10 +116,21 @@
         }
       }
     },
-    "/api/Animal/GetAllAnimals": {
+    "/api/Animal/GetAllUserAnimals/{userId}": {
       "get": {
         "tags": [
           "Animal"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -129,7 +140,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/getAnimalDto"
+                    "$ref": "#/components/schemas/getAllUserAnimalsDto"
                   }
                 }
               },
@@ -137,7 +148,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/getAnimalDto"
+                    "$ref": "#/components/schemas/getAllUserAnimalsDto"
                   }
                 }
               },
@@ -145,7 +156,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/getAnimalDto"
+                    "$ref": "#/components/schemas/getAllUserAnimalsDto"
                   }
                 }
               }
@@ -216,6 +227,70 @@
         "parameters": [
           {
             "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AnimalData/updateState/{animalId}/{newState}": {
+      "post": {
+        "tags": [
+          "AnimalData"
+        ],
+        "parameters": [
+          {
+            "name": "animalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "newState",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AnimalData/switchDivision/{animalId}/{newDivision}": {
+      "post": {
+        "tags": [
+          "AnimalData"
+        ],
+        "parameters": [
+          {
+            "name": "animalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "newDivision",
             "in": "path",
             "required": true,
             "schema": {
@@ -1171,6 +1246,32 @@
         },
         "additionalProperties": false
       },
+      "getAllUserAnimalsDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "number": {
+            "type": "string",
+            "nullable": true
+          },
+          "farmId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "divisionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sex": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "getAnimalDto": {
         "type": "object",
         "properties": {
@@ -1197,6 +1298,18 @@
           "birthdate": {
             "type": "string",
             "format": "date-time"
+          },
+          "weight": {
+            "type": "string",
+            "nullable": true
+          },
+          "division": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

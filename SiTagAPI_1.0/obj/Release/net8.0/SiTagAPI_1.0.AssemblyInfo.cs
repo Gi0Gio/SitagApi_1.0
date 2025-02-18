@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SiTagAPI_1.0")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e753816d141de72e6e18c02b7bc2153ded86326")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c18ff856a6d167c19b7e821644b8c6072f20c07")]
 [assembly: System.Reflection.AssemblyProductAttribute("SiTagAPI_1.0")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SiTagAPI_1.0")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

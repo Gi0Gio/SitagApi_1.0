@@ -58,13 +58,28 @@ namespace SiTagAPI_1._0.Controllers
             return Ok(animal);
         }
 
-        // GET: api/Animal/GetAllAnimals
-        [HttpGet("GetAllAnimals")]
-        public async Task<ActionResult<List<getAnimalDto>>> GetAllAnimals()
+        // GET: api/Animal/GetAllAnimals/
+        [HttpGet("GetAllUserAnimals/{userId}")]
+        public async Task<ActionResult<List<getAllUserAnimalsDto>>> GetAllAnimals(int userId)
         {
-            var animals = await _animalServices.GetAllAnimals();
 
-            return Ok(animals);
+            try
+            {
+                var animals = await _animalServices.GetAllUserAnimals(userId);
+
+               
+                if (animals == null || !animals.Any())
+                {
+                    return NotFound(new { message = $"El usuario con ID {userId} no tiene animales registrados." });
+                }
+
+                return Ok(animals);
+
+            } catch (Exception ex)
+    {
+        return StatusCode(500, new { message = "Ocurrió un error al procesar la solicitud.", error = ex.Message
+    });
+    }
         }
 
 
