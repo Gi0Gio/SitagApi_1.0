@@ -1,5 +1,135 @@
 [
   {
+    "ContainingType": "SiTagAPI_1._0.Controllers.ActivityController",
+    "Method": "CreateActivity",
+    "RelativePath": "api/Activity/addActivity/{animalId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "animalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createActivity",
+        "Type": "SiTagAPI_1._0.DTOs.CreateActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SiTagAPI_1._0.Models.Activity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.ActivityController",
+    "Method": "DeleteActivity",
+    "RelativePath": "api/Activity/deleteActivity/{activityId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.ActivityController",
+    "Method": "GetAllActivitiesByUser",
+    "RelativePath": "api/Activity/GetAllActivitiesByUser/{UserId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SiTagAPI_1._0.DTOs.GetAllActivitiesByUserDto, SiTagAPI_1.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.ActivityController",
+    "Method": "MoveAnimalsToDivision",
+    "RelativePath": "api/Activity/moveAnimalsToDivision/{userId}/{currentDivisionId}/{newDivisionId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "currentDivisionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newDivisionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.ActivityController",
+    "Method": "UpdateActivity",
+    "RelativePath": "api/Activity/updateActivity/{activityId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateActivity",
+        "Type": "SiTagAPI_1._0.DTOs.UpdateActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SiTagAPI_1._0.Controllers.AnimalController",
     "Method": "CreateAnimal",
     "RelativePath": "api/Animal/addAnimal",
@@ -329,8 +459,45 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "animalId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
         "Name": "serviceDto",
         "Type": "SiTagAPI_1._0.DTOs.CreateServiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.MedicalServiceController",
+    "Method": "DeleteMedicalService",
+    "RelativePath": "api/MedicalService/deleteMedicalService/{serviceId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.MedicalServiceController",
+    "Method": "GetAnimalsHistory",
+    "RelativePath": "api/MedicalService/getAnimalsHistory/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -347,6 +514,27 @@
       {
         "Name": "animalId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SiTagAPI_1._0.Controllers.MedicalServiceController",
+    "Method": "UpdateService",
+    "RelativePath": "api/MedicalService/updateService/{serviceId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateService",
+        "Type": "SiTagAPI_1._0.DTOs.UpdateServiceDto",
         "IsRequired": true
       }
     ],

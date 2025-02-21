@@ -20,7 +20,7 @@ namespace SiTagAPI_1._0.Controllers
         // Endpoints
 
         // POST: api/Animal/addAnimal
-
+        
         [HttpPost("addAnimal")]
         public async Task<ActionResult<Animal>> CreateAnimal(CreateAnimalDto createAnimal)
         {

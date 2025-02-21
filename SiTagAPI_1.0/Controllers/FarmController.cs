@@ -19,6 +19,7 @@ namespace SiTagAPI_1._0.Controllers
         // Endpoints
 
         // POST: api/Farm/addFarm
+        //Corregir esta mierda de controlador = /{userId}
         [HttpPost("addFarm")]
         public async Task<IActionResult> CreateFarm(CreateFarmDto farmDto)
         {

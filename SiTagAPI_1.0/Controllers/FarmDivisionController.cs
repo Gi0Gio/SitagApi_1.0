@@ -17,7 +17,9 @@ namespace SiTagAPI_1._0.Controllers
             _divisionServices = divisionServices;
         }
 
-       
+        // Endpoints
+        // POST: api/FarmDivision/createDivision
+        //Corregir esta mierda de controlador = /{FarmId}
         [HttpPost]
         public async Task<ActionResult<FarmDivision>> CreateDivision(CreateDivisionDto createDivision)
         {
