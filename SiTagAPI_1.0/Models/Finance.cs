@@ -11,7 +11,7 @@ public partial class Finance
 
     public double Amount { get; set; }
 
-    public DateOnly Date { get; set; }
+    public DateTime Date { get; set; }
 
     public string Description { get; set; } = null!;
 

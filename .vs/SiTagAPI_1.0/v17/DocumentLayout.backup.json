@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\services\\activityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\services\\activityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\controllers\\activitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\controllers\\activitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\services\\interfaces\\ifinanceservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\services\\interfaces\\ifinanceservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\services\\interfaces\\iactivityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\services\\interfaces\\iactivityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\services\\financeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\services\\financeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\dtos\\activitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\dtos\\activitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\models\\finance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\models\\finance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|c:\\users\\evers\\source\\repos\\sitagapi_1.0\\sitagapi_1.0\\dtos\\financedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E30CF36-D52B-44CB-AB58-26140F9710B4}|SiTagAPI_1.0\\SiTagAPI_1.0.csproj|solutionrelative:sitagapi_1.0\\dtos\\financedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,80 +50,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Program.cs",
-              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Program.cs",
-              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Program.cs",
-              "RelativeToolTip": "SiTagAPI_1.0\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAABCAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FinanceController.cs",
+              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Controllers\\FinanceController.cs",
+              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Controllers\\FinanceController.cs",
+              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Controllers\\FinanceController.cs",
+              "RelativeToolTip": "SiTagAPI_1.0\\Controllers\\FinanceController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T00:19:51.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AnimalController.cs",
-              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Controllers\\AnimalController.cs",
-              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Controllers\\AnimalController.cs",
-              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Controllers\\AnimalController.cs",
-              "RelativeToolTip": "SiTagAPI_1.0\\Controllers\\AnimalController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T00:19:13.233Z",
+              "WhenOpened": "2025-02-22T19:22:03.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ActivityController.cs",
-              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Controllers\\ActivityController.cs",
-              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Controllers\\ActivityController.cs",
-              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Controllers\\ActivityController.cs",
-              "RelativeToolTip": "SiTagAPI_1.0\\Controllers\\ActivityController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAwD4AAABgAAAAAAAAAA==",
+              "Title": "IFinanceServices.cs",
+              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Services\\Interfaces\\IFinanceServices.cs",
+              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Services\\Interfaces\\IFinanceServices.cs",
+              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Services\\Interfaces\\IFinanceServices.cs",
+              "RelativeToolTip": "SiTagAPI_1.0\\Services\\Interfaces\\IFinanceServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T00:19:11.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IActivityServices.cs",
-              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Services\\Interfaces\\IActivityServices.cs",
-              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Services\\Interfaces\\IActivityServices.cs",
-              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Services\\Interfaces\\IActivityServices.cs",
-              "RelativeToolTip": "SiTagAPI_1.0\\Services\\Interfaces\\IActivityServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T00:18:07.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ActivityServices.cs",
-              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Services\\ActivityServices.cs",
-              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Services\\ActivityServices.cs",
-              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Services\\ActivityServices.cs",
-              "RelativeToolTip": "SiTagAPI_1.0\\Services\\ActivityServices.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHgAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T00:16:42.79Z",
+              "WhenOpened": "2025-02-22T19:20:36.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ActivityDto.cs",
-              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\DTOs\\ActivityDto.cs",
-              "RelativeDocumentMoniker": "SiTagAPI_1.0\\DTOs\\ActivityDto.cs",
-              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\DTOs\\ActivityDto.cs",
-              "RelativeToolTip": "SiTagAPI_1.0\\DTOs\\ActivityDto.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowAQAAAAjAAAAAAAAAA==",
+              "Title": "Finance.cs",
+              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Models\\Finance.cs",
+              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Models\\Finance.cs",
+              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Models\\Finance.cs",
+              "RelativeToolTip": "SiTagAPI_1.0\\Models\\Finance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T00:10:12.519Z",
+              "WhenOpened": "2025-02-22T19:13:16.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FinanceDto.cs",
+              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\DTOs\\FinanceDto.cs",
+              "RelativeDocumentMoniker": "SiTagAPI_1.0\\DTOs\\FinanceDto.cs",
+              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\DTOs\\FinanceDto.cs",
+              "RelativeToolTip": "SiTagAPI_1.0\\DTOs\\FinanceDto.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwCkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T19:12:42.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FinanceServices.cs",
+              "DocumentMoniker": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Services\\FinanceServices.cs",
+              "RelativeDocumentMoniker": "SiTagAPI_1.0\\Services\\FinanceServices.cs",
+              "ToolTip": "C:\\Users\\evers\\source\\repos\\SitagApi_1.0\\SiTagAPI_1.0\\Services\\FinanceServices.cs",
+              "RelativeToolTip": "SiTagAPI_1.0\\Services\\FinanceServices.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAAAKUAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T19:09:08.509Z",
               "EditorCaption": ""
             }
           ]

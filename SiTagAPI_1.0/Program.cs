@@ -27,6 +27,7 @@ builder.Services.AddScoped<IDataServices,AnimalDataServices>();
 builder.Services.AddScoped<IUserServices,UserServices>();
 builder.Services.AddScoped<IMedicalService, MedicalServiceServices>();
 builder.Services.AddScoped<IActivityServices, ActivityServices>();
+builder.Services.AddScoped<IFinanceServices, FinanceServices>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
